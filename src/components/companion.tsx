@@ -5,12 +5,12 @@ import { Sparkles, Heart } from "lucide-react";
 
 const colorMap: Record<string, string> = {
   ".": "transparent",
-  "b": "#9CA3AF", // Body salt-and-pepper gray (Schnauzer)
-  "d": "#4B5563", // Ears/Shadow dark charcoal
-  "c": "#F9FAFB", // Beard/eyebrows white-cream
-  "k": "#111827", // Black eyes/nose
-  "w": "#FFFFFF", // White reflections
-  "r": "#DC2626", // Red collar/bowl
+  "b": "#9CA3AF", 
+  "d": "#4B5563", 
+  "c": "#F9FAFB", 
+  "k": "#111827", 
+  "w": "#FFFFFF", 
+  "r": "#DC2626", 
 };
 
 const IDLE_FRAME_1 = [
@@ -175,7 +175,6 @@ export function Companion() {
   const [frameIndex, setFrameIndex] = useState<number>(0);
   const [particles, setParticles] = useState<Particle[]>([]);
 
-  // Passive energy drain & automatic sleeping
   useEffect(() => {
     const drainInterval = setInterval(() => {
       setEnergy((prev) => {
@@ -190,7 +189,6 @@ export function Companion() {
     return () => clearInterval(drainInterval);
   }, []);
 
-  // Frame tick animation
   useEffect(() => {
     const frameInterval = setInterval(() => {
       setFrameIndex((prev) => (prev === 0 ? 1 : 0));
@@ -199,17 +197,14 @@ export function Companion() {
     return () => clearInterval(frameInterval);
   }, []);
 
-  // Floating Zzz particles while sleeping
   useEffect(() => {
     if (state !== "sleeping") return;
 
     const zzzInterval = setInterval(() => {
       const id = Date.now() + Math.random();
-      // Random X offset to make it swing
       const randomX = Math.random() * 30 - 15;
       setParticles((prev) => [...prev, { id, text: "💤", x: randomX, y: 0 }]);
       
-      // Cleanup particle after 2 seconds
       setTimeout(() => {
         setParticles((prev) => prev.filter((p) => p.id !== id));
       }, 2000);
@@ -222,7 +217,7 @@ export function Companion() {
     const newParticles: Particle[] = [];
     for (let i = 0; i < count; i++) {
       const id = Date.now() + Math.random() + i;
-      const x = Math.random() * 60 - 30; // wider range
+      const x = Math.random() * 60 - 30;
       newParticles.push({ id, text, x, y: 0 });
       setTimeout(() => {
         setParticles((prev) => prev.filter((p) => p.id !== id));
@@ -233,7 +228,6 @@ export function Companion() {
 
   const handlePet = () => {
     if (state === "sleeping" && energy < 20) {
-      // Too tired
       emitParticles("💤", 1);
       return;
     }
@@ -258,7 +252,6 @@ export function Companion() {
     }, 2500);
   };
 
-  // Select active frame based on state & tick
   const getActiveFrame = () => {
     switch (state) {
       case "happy":

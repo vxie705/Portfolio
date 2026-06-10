@@ -48,7 +48,6 @@ export async function submitContact(
   }
 
   // TODO: Integrate with email service (Resend, SendGrid, etc.)
-  // For now, we log the submission and return success
   console.log("Contact form submission:", result.data);
 
   return { success: true };

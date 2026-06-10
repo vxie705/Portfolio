@@ -7,7 +7,6 @@
   --font-serif: var(--font-bitter), Georgia, serif;
 }
 
-/* ── Body ──────────────────────────────────────────────── */
 body {
   background-color: var(--background);
   color: var(--foreground);
@@ -32,7 +31,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ── Scroll Animations ─────────────────────────────────── */
+
 @keyframes float-up {
   0% {
     transform: translateY(0) scale(0.8);
@@ -86,7 +85,7 @@ html {
   animation: scale-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* Stagger delays */
+
 .delay-0  { animation-delay: 0.00s; }
 .delay-1  { animation-delay: 0.04s; }
 .delay-2  { animation-delay: 0.08s; }
@@ -99,19 +98,19 @@ html {
 .delay-9  { animation-delay: 0.36s; }
 .delay-10 { animation-delay: 0.40s; }
 
-/* ── Section dividers ──────────────────────────────────── */
+
 .section-divider {
   height: 1px;
   background: var(--border);
   border: none;
 }
 
-/* ── Section alternate background ──────────────────────── */
+
 .bg-section-alt {
   background-color: transparent;
 }
 
-/* ── Heading prefix — cyberpunk style ───────────────────── */
+
 .section-prefix {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
@@ -121,14 +120,13 @@ html {
   margin-bottom: 0.75rem;
 }
 
-/* ── Heading underline — editorial accent ──────────────── */
+
 .heading-underline {
   position: relative;
   display: inline-block;
   padding-bottom: 0.25em;
 }
 
-/* ── Project card — restrained hover ───────────────────── */
 .project-card {
   transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
   will-change: transform;
@@ -139,7 +137,7 @@ html {
   box-shadow: 0 4px 20px rgba(99, 102, 241, 0.08);
 }
 
-/* ── Link accent ──────────────────────────────────────── */
+
 .link-accent {
   color: var(--accent);
   text-decoration: none;
@@ -149,7 +147,7 @@ html {
   opacity: 0.85;
 }
 
-/* Retro styling for terminal cards */
+
 .terminal-window {
   border: 1px solid var(--border);
   background: var(--card);
@@ -185,7 +183,7 @@ html {
   color: var(--muted-foreground);
 }
 
-/* ── Reduced motion ────────────────────────────────────── */
+
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-in-up,
   .animate-fade-in,

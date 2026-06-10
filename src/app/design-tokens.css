@@ -1,19 +1,16 @@
-/* ═══════════════════════════════════════════════════════════
-   Design Tokens — Josué · Portafolio Cyberpunk/Terminal
-   Principios: exactitud, rejilla, terminal, interacción.
-   ═══════════════════════════════════════════════════════════ */
+
 
 :root {
-  /* ── Paleta Cyberpunk / Retro Terminal ───────────────── */
+
   --background:         #1a1a1a;
-  --background-subtle:  #1a1a1a;   /* secciones alternas */
+  --background-subtle:  #1a1a1a;  
   --foreground:         #e5e5e5;
   --muted:              #222222;
   --muted-foreground:   #a0a0a0;
   --border:             #2a2a2a;
-  --border-subtle:      #171b2f;   /* borders que casi desaparecen */
-  --accent:             #00ff66;   /* verde neón principal */
-  --accent-secondary:   #6366f1;   /* violeta secundario */
+  --border-subtle:      #171b2f;   
+  --accent:             #00ff66;   
+  --accent-secondary:   #6366f1;   
   --accent-soft:        rgba(0, 255, 102, 0.06);
   --accent-soft-purple: rgba(99, 102, 241, 0.08);
   --accent-hover:       rgba(0, 255, 102, 0.12);
@@ -21,52 +18,46 @@
   --card-foreground:    #f3f4f6;
   --ring:               #00ff66;
 
-  /* ── Tipografía ──────────────────────────────────────── */
   --font-heading:       var(--font-inter), system-ui, -apple-system, sans-serif;
   --font-body:          var(--font-inter), system-ui, -apple-system, sans-serif;
   --font-mono:          var(--font-jetbrains-mono), ui-monospace, 'Cascadia Code', monospace;
 
-  /* Escala tipográfica */
-  --text-xs:            0.75rem;     /* 12px */
-  --text-sm:            0.875rem;    /* 14px */
-  --text-base:          1rem;        /* 16px */
-  --text-lg:            1.125rem;    /* 18px */
-  --text-xl:            1.25rem;     /* 20px */
-  --text-2xl:           1.5rem;      /* 24px */
-  --text-3xl:           1.875rem;    /* 30px */
-  --text-4xl:           2.25rem;     /* 36px */
-  --text-5xl:           3rem;        /* 48px */
-  --text-6xl:           3.75rem;     /* 60px */
-  --text-7xl:           4.5rem;      /* 72px */
+  --text-xs:            0.75rem;    
+  --text-sm:            0.875rem;    
+  --text-base:          1rem;        
+  --text-lg:            1.125rem;    
+  --text-xl:            1.25rem;     
+  --text-2xl:           1.5rem;     
+  --text-3xl:           1.875rem;  
+  --text-4xl:           2.25rem;     
+  --text-5xl:           3rem;        
+  --text-6xl:           3.75rem;    
+  --text-7xl:           4.5rem;      
 
-  /* Interlineado */
+
   --leading-tight:      1.2;
   --leading-normal:     1.6;
   --leading-prose:      1.8;
 
-  /* ── Espaciado ─────────────────────────────── */
-  --max-width-content:  44rem;       /* 704px — columna media */
-  --max-width-wide:     64rem;       /* 1024px — grids */
+  
+  --max-width-content:  44rem;       
+  --max-width-wide:     64rem;       
   --max-width-nav:      64rem;
 
-  --space-section:      7rem;        /* entre secciones */
-  --space-section-sm:   5rem;        /* mobile */
-  --space-subsection:   3rem;        /* dentro de una sección */
-  --space-element:      1.5rem;      /* entre elementos cercanos */
-  --space-tight:        0.75rem;     /* entre elementos íntimos */
-
-  /* ── Bordes y radios ─────────────────────────────────── */
+  --space-section:      7rem;        
+  --space-section-sm:   5rem;        
+  --space-subsection:   3rem;        
+  --space-element:      1.5rem;     
+  --space-tight:        0.75rem;     
   --radius-sm:          4px;
   --radius-md:          6px;
   --radius-lg:          8px;
   --radius-full:        9999px;
 
-  /* ── Transiciones ────────────────────────────────────── */
   --transition-fast:    0.1s ease;
   --transition-base:    0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-slow:    0.4s ease;
 
-  /* ── Hover ───────────────────────────────────────────── */
   --hover-lift:         -3px;
 }
 
