@@ -8,19 +8,19 @@ export function Hero() {
       {/* Top Navigation Bar */}
       <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 border-b border-[var(--border)] bg-[var(--background)]/85 backdrop-blur-md">
         <div className="flex items-center gap-6">
-          <Link href="/" className="font-mono text-sm font-bold tracking-tight text-[var(--accent)] hover:opacity-80">
-            josue.dev | Systems & Low-Level
+          <Link href="/" className="font-mono text-xs sm:text-sm font-bold tracking-tight text-[var(--accent)] hover:opacity-80 truncate max-w-[200px] sm:max-w-none">
+            josue.dev
           </Link>
         </div>
         
-        <div className="flex items-center gap-6 font-mono text-xs text-[var(--muted-foreground)]">
+        <div className="hidden md:flex items-center gap-6 font-mono text-xs text-[var(--muted-foreground)]">
           <a href="#about" className="hover:text-white transition-colors">sobre mí</a>
           <a href="#tech-stack" className="hover:text-white transition-colors">tecnologías</a>
           <a href="#projects" className="hover:text-white transition-colors">proyectos</a>
           <a href="#contact" className="hover:text-white transition-colors">contacto</a>
         </div>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="flex items-center gap-3 sm:gap-4">
           <Link
             href="https://github.com/vxie705"
             target="_blank"
