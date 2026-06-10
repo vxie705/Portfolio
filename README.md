@@ -1,44 +1,53 @@
-<h1 align="center">josue.dev | Systems & Low-Level</h1>
+# 🖥️ josue.dev | Systems & Low-Level
 
 <p align="center">
-
-  <a href="https://portfolio-devone-s-projects.vercel.app"><b>Visitar Portafolio en Vivo</b></a>
-
+  <em>"Construyendo desde el kernel hasta la nube."</em>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Next.js-15.5-black?logo=next.js" />
-  <img src="https://img.shields.io/badge/React-19-blue?logo=react" />
-  <img src="https://img.shields.io/badge/TypeScript-5.7-blue?logo=typescript" />
-  <img src="https://img.shields.io/badge/Tailwind-4-06B6D4?logo=tailwindcss" />
+  <a href="https://portfolio-git-main-devone-s-projects.vercel.app"><b>🔗 Ver Portafolio en Vivo</b></a>
 </p>
 
-Portafolio personal con estética terminal oscura, mascota interactiva pixel art (Schnauzer) y arquitectura modular por componentes.
+---
 
-## Características
+## 📖 Arquitectura de Autor
+Este portafolio no es un template; es un **entorno digital diseñado a medida**. He construido este sistema bajo una premisa clara: **la tecnología debe servir a la intención, no al revés.** Mi enfoque como ingeniero combina la rigurosidad del desarrollo de sistemas de bajo nivel con la agilidad de las arquitecturas web modernas. Aquí no encontrarás "cajas negras", sino un sistema modular, tipado y optimizado.
 
-- **Companion Interactivo** — Milo, un Schnauzer pixel art con estados (idle, feliz, comiendo, durmiendo), sistema de energía y partículas animadas.
-- **Terminal Aesthetic** — Diseño oscuro con bordes sutiles, tipografía monoespaciada y acentos verde neón.
-- **Responsive** — Adaptable a mobile, tablet y desktop con grid layout.
+---
 
-## Proyectos Destacados
+## 🛠️ Stack Tecnológico
+Seleccioné cada herramienta por su capacidad de ofrecer un rendimiento predecible y una mantenibilidad a largo plazo:
 
-- **Workflow Engine** — Framework C++20 para pipelines de procesamiento con comandos inyectables y configuración JSON.
-- **Rootkit & Memory Detector** — Detección de amenazas a nivel kernel y memoria en Windows.
-- **Source Engine Tool** — Extracción automatizada de metadatos del motor Source (Valve) en C.
+| Capa | Tecnología | Propósito |
+| :--- | :--- | :--- |
+| **Framework** | Next.js 15 | Renderizado optimizado y SEO |
+| **Lenguaje** | TypeScript 5.7 | Seguridad en tipos y robustez |
+| **Interfaz** | Tailwind CSS 4 | Diseño minimalista y eficiente |
+| **Datos** | Zod | Integración y validación estricta |
+| **Ecosistema** | React 19 | Arquitectura basada en componentes |
 
-## Stack
+---
 
-| Categoría | Tecnología |
-|-----------|-----------|
-| Framework | Next.js 15 (App Router) |
-| UI | React 19, Tailwind CSS 4 |
-| Lenguaje | TypeScript 5.7 |
-| Iconos | Lucide React |
-| Linting | ESLint 9 |
+## 🚀 Proyectos que definen mi enfoque
 
-## Estructura
+* **Workflow Engine:** Un framework C++20 diseñado para orquestar pipelines de datos mediante configuración JSON. Enfocado en observabilidad y bajo acoplamiento.
+* **Advanced Rootkit & Memory Detector:** Herramienta de ciberseguridad a nivel kernel en Windows. Identificación de inyecciones de código y procesos anómalos.
+* **Source Engine Diagnostic Tool:** Utilidad de bajo nivel en C para la extracción y diagnóstico de estructuras de datos (NetVars) en el motor Source de Valve.
 
+---
+
+## 💡 Filosofía de Desarrollo
+1.  **Claridad sobre Complejidad:** La interfaz debe reflejar la lógica del sistema. Sin fricción, sin ruido.
+2.  **Trazabilidad:** Cada componente y contrato de datos está diseñado para ser auditable y escalable.
+3.  **Identidad Técnica:** Este sitio utiliza una estética inspirada en terminales de sistemas para rendir homenaje a mis raíces en el desarrollo de bajo nivel.
+
+---
+
+## 📂 Arquitectura del Proyecto
+
+La estructura sigue un patrón modular en `src/`, facilitando la escalabilidad y el mantenimiento de componentes independientes:
+
+```text
 src/
 ├── app/
 │   ├── layout.tsx
@@ -53,4 +62,3 @@ src/
     ├── contact.tsx
     ├── companion.tsx
     └── footer.tsx
-
