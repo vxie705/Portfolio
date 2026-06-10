@@ -22,6 +22,7 @@ graph TB
         PROJ["📁 projects.tsx<br/>Proyectos"]
         CONTACT["📧 contact.tsx<br/>Formulario"]
         FOOTER["📋 footer.tsx<br/>Pie de Página"]
+        COMPANION["🐶 companion.tsx<br/>Mascota Interactiva"]
     end
 
     subgraph "🎨 Estilos"
@@ -49,9 +50,11 @@ graph TB
     PAGE --> PROJ
     PAGE --> CONTACT
     PAGE --> FOOTER
+    HERO --> COMPANION
     TAILWIND -.->|"Estiliza"| PAGE
     TAILWIND -.->|"Estiliza"| HERO
     TAILWIND -.->|"Estiliza"| ABOUT
+    TAILWIND -.->|"Estiliza"| COMPANION
     LUCIDE -.->|"Iconos"| PAGE
     TSC -.->|"Type Check"| PAGE
     ESLINT -.->|"Linting"| PAGE
@@ -66,6 +69,7 @@ graph TB
     style PROJ fill:#e1d5e7,stroke:#9673a6,color:#000
     style CONTACT fill:#e1d5e7,stroke:#9673a6,color:#000
     style FOOTER fill:#e1d5e7,stroke:#9673a6,color:#000
+    style COMPANION fill:#f5f5dc,stroke:#d4a574,color:#000
     style TAILWIND fill:#f8cecc,stroke:#b85450,color:#000
     style POSTCSS fill:#f8cecc,stroke:#b85450,color:#000
     style GLOBALSCSS fill:#f8cecc,stroke:#b85450,color:#000
@@ -99,6 +103,7 @@ graph LR
             P2["projects.tsx"]
             C2["contact.tsx"]
             F2["footer.tsx"]
+            CP["companion.tsx"]
         end
     end
 
@@ -110,8 +115,10 @@ graph LR
     PAGE2 --> P2
     PAGE2 --> C2
     PAGE2 --> F2
+    H2 --> CP
     CSS --> LAYOUT2
     CSS --> H2
+    CSS --> CP
 
     style PKG fill:#d5e8d4,stroke:#82b366,color:#000
     style LAYOUT2 fill:#fff2cc,stroke:#d6b656,color:#000
@@ -123,6 +130,7 @@ graph LR
     style P2 fill:#e1d5e7,stroke:#9673a6,color:#000
     style C2 fill:#e1d5e7,stroke:#9673a6,color:#000
     style F2 fill:#e1d5e7,stroke:#9673a6,color:#000
+    style CP fill:#f5f5dc,stroke:#d4a574,color:#000
 ```
 
 ## 🔄 Flujo de Renderizado
@@ -146,6 +154,7 @@ sequenceDiagram
     Page->>Comp: Montar Projects
     Page->>Comp: Montar Contact
     Page->>Comp: Montar Footer
+    Comp->>Comp: Montar Companion (dentro de Hero)
     CSS-->>Comp: Estilos Utility-first
     Comp-->>Page: Componentes renderizados
     Page-->>Layout: Página completa
@@ -162,4 +171,4 @@ pie title Stack Tecnológico
     "TypeScript" : 20
     "Tailwind CSS 4" : 15
     "Lucide React" : 10
-    "Zod" : 5
+    "Pixel Art (SVG)" : 5
